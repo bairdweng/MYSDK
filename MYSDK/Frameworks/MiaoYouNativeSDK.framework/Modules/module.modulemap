@@ -1,0 +1,11 @@
+framework module MiaoYouNativeSDK {
+  umbrella header "MiaoYouNativeSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MiaoYouNativeSDK.Swift {
+    header "MiaoYouNativeSDK-Swift.h"
+    requires objc
+}

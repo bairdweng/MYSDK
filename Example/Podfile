@@ -1,0 +1,12 @@
+platform :ios, '10.0'
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+target 'MYSDK_Example' do
+  pod 'MYSDK', :path => '../'
+
+  target 'MYSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
