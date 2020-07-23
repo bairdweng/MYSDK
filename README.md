@@ -1,29 +1,43 @@
 # MYSDK
 
-[![CI Status](https://img.shields.io/travis/bairdweng/MYSDK.svg?style=flat)](https://travis-ci.org/bairdweng/MYSDK)
-[![Version](https://img.shields.io/cocoapods/v/MYSDK.svg?style=flat)](https://cocoapods.org/pods/MYSDK)
-[![License](https://img.shields.io/cocoapods/l/MYSDK.svg?style=flat)](https://cocoapods.org/pods/MYSDK)
-[![Platform](https://img.shields.io/cocoapods/p/MYSDK.svg?style=flat)](https://cocoapods.org/pods/MYSDK)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-MYSDK is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### 快速集成
 
 ```ruby
-pod 'MYSDK'
+# 设置版本
+platform :ios, '10.0'
+# 使用 frameworks的方式
+use_frameworks!
+# 指定源
+source 'https://github.com/CocoaPods/Specs.git'
+target 'MiaoYouExampleOC' do
+  pod 'MYSDK', :git => 'https://github.com/bairdweng/MYSDK'
+end
 ```
 
 ## Author
 
 bairdweng, 644672334@qq.com
 
-## License
+## 
 
-MYSDK is available under the MIT license. See the LICENSE file for more info.
+* 私有pods包含framewok
+
+  ```ruby
+  s.vendored_frameworks = "MYSDK/Frameworks/*.framework"
+  ```
+
+* 动态库以及静态库的位置
+
+  > 静态库
+
+  ```
+  Build Phass LinkBinary With Libraries
+  ```
+
+  > 动态库
+
+  ```js
+  Build Phass copy file
+  ```
+
+  
